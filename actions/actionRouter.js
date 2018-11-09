@@ -23,6 +23,11 @@ router.get("/:id", (req, res) => {
 
 // C R E A T E   A C T I O N
 router.post("/", (req, res) => {
+  if (!req.body.notes || !req.body.description) {
+    return res
+      .status(400)
+      .json({ message: "Must have notes, description and a project ID." });
+  }
   actionDB
     .insert(req.body)
     .then(actionData => {
