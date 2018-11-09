@@ -25,6 +25,11 @@ router.get("/:id", (req, res) => {
 
 // C R E A T E   P R O J E C T
 router.post("/", (req, res) => {
+  if (!req.body.name || !req.body.description) {
+    return res
+      .status(400)
+      .json({ message: "Must have a name and description." });
+  }
   projectDB
     .insert(req.body)
     .then(projectData => {
