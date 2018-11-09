@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+  display: flex;
+  background: linear-gradient(to top, #c5796d, #dbe6f6);
+  height: 100vh;
+}
