@@ -31,16 +31,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="projects">
-          <h1>Projects</h1>
+        <div className="projects__headline">
+          <h1>Our Current Projects</h1>
           {this.state.projects.map(project => {
-            return <h3 key={project.id}>{project.name}</h3>;
-          })}
-        </div>
-        <div className="actions">
-          <h1>Actions</h1>
-          {this.state.actions.map(action => {
-            return <h3 key={action.id}>{action.name}</h3>;
+            return (
+              <div className="project">
+                <h3 className="project__title">{project.name}</h3>
+                <span className="project__description">
+                  {project.description}
+                </span>
+              </div>
+            );
           })}
         </div>
       </div>

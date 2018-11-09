@@ -1,6 +1,26 @@
 .App {
   text-align: center;
   display: flex;
+  justify-content: center;
   background: linear-gradient(to top, #c5796d, #dbe6f6);
   height: 100vh;
+  font-family: Raleway;
+}
+
+.projects__headline {
+  font-size: 30px;
+  margin-bottom: 100px;
+}
+
+.project {
+  margin-bottom: 50px;
+}
+
+.project__title {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.project__description {
+  padding: 0 50px;
+  font-size: 18px;
 }
